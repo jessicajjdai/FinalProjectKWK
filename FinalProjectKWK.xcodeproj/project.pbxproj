@@ -19,6 +19,7 @@
 		55386C6E24D1C2C2001A15E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 55386C6C24D1C2C2001A15E0 /* LaunchScreen.storyboard */; };
 		55386C7924D1C2C2001A15E0 /* FinalProjectKWKTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55386C7824D1C2C2001A15E0 /* FinalProjectKWKTests.swift */; };
 		55386C8424D1C2C2001A15E0 /* FinalProjectKWKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55386C8324D1C2C2001A15E0 /* FinalProjectKWKUITests.swift */; };
+		F052EB0724D22769007CC270 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F052EB0624D22769007CC270 /* TimerViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		55386C7F24D1C2C2001A15E0 /* FinalProjectKWKUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FinalProjectKWKUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		55386C8324D1C2C2001A15E0 /* FinalProjectKWKUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalProjectKWKUITests.swift; sourceTree = "<group>"; };
 		55386C8524D1C2C2001A15E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F052EB0624D22769007CC270 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +113,7 @@
 				55386C6024D1C2BB001A15E0 /* SceneDelegate.swift */,
 				55386C6224D1C2BB001A15E0 /* ViewController.swift */,
 				55386C6424D1C2BB001A15E0 /* Main.storyboard */,
+				F052EB0624D22769007CC270 /* TimerViewController.swift */,
 				55386C6A24D1C2C2001A15E0 /* Assets.xcassets */,
 				55386C6C24D1C2C2001A15E0 /* LaunchScreen.storyboard */,
 				55386C6F24D1C2C2001A15E0 /* Info.plist */,
@@ -275,6 +278,7 @@
 				5531270E24D20ABA0032BBBF /* GoalsTableViewController.swift in Sources */,
 				55386C6324D1C2BB001A15E0 /* ViewController.swift in Sources */,
 				5531271024D20B230032BBBF /* Goals.swift in Sources */,
+				F052EB0724D22769007CC270 /* TimerViewController.swift in Sources */,
 				55386C5F24D1C2BB001A15E0 /* AppDelegate.swift in Sources */,
 				55386C6924D1C2BB001A15E0 /* FinalProjectKWK.xcdatamodeld in Sources */,
 				55386C6124D1C2BB001A15E0 /* SceneDelegate.swift in Sources */,

@@ -63,7 +63,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6d-S8-pCY">
-                                <rect key="frame" x="64" y="319" width="100" height="107"/>
+                                <rect key="frame" x="64" y="319" width="100" height="106"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Chicken" image="PngItem_908706"/>
                             </button>
@@ -209,7 +209,7 @@
         <!--Timer-->
         <scene sceneID="cHi-OM-Lwl">
             <objects>
-                <viewController title="Timer" id="qO0-Sw-O0w" sceneMemberID="viewController">
+                <viewController title="Timer" id="qO0-Sw-O0w" customClass="TimerViewController" customModule="FinalProjectKWK" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="lvU-Eq-UO0">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,6 +228,9 @@
                                 <state key="normal" title="Start">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="start:" destination="qO0-Sw-O0w" eventType="touchUpInside" id="T8W-xU-yTw"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dyi-mj-gzY">
                                 <rect key="frame" x="249" y="218" width="96" height="46"/>
@@ -236,6 +239,9 @@
                                 <state key="normal" title="Pause">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="stop:" destination="qO0-Sw-O0w" eventType="touchUpInside" id="JeN-F9-4aC"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Current Goal:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lRn-7N-7y0">
                                 <rect key="frame" x="48" y="587" width="102" height="21"/>
@@ -286,6 +292,9 @@
                         <viewLayoutGuide key="safeArea" id="vo2-yt-GQE"/>
                     </view>
                     <navigationItem key="navigationItem" title="Timer" id="Gzb-el-Out"/>
+                    <connections>
+                        <outlet property="stopWatch" destination="CxV-Ge-u41" id="0XA-LQ-9JS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8k-VT-uUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
