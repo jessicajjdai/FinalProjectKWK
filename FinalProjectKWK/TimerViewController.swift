@@ -100,8 +100,8 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             let todaySession = TimedSessionCD(entity: TimedSessionCD.entity(), insertInto: context)
             if let stopWatchTime = stopWatch.text {
                 todaySession.timeSpent = stopWatchTime
-                todaySession.goal = "Goal goes here"
-                todaySession.date = "XX/XX/XXXX"
+                todaySession.goal = "a goal"
+                todaySession.date = "07/31/2020"
             }
             try? context.save()
             navigationController?.popViewController(animated: true)

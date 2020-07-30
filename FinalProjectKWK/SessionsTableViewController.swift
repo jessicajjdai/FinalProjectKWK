@@ -68,7 +68,7 @@ class SessionsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseTableIdentifier", for: indexPath)
         let listedSession = savedSessions[indexPath.row]
         if let listedGoal = listedSession.goal {
-            cell.textLabel?.text = "MM/dd/yyyy \(listedGoal) for " + listedSession.timeSpent!
+            cell.textLabel?.text = "\(listedSession.date!) Spent \(listedSession.timeSpent!) on \(listedGoal)"
         }
         // Configure the cell...
 
