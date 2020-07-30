@@ -11,6 +11,7 @@
 		5531270E24D20ABA0032BBBF /* GoalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531270D24D20ABA0032BBBF /* GoalsTableViewController.swift */; };
 		5531271024D20B230032BBBF /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531270F24D20B230032BBBF /* Goals.swift */; };
 		5531271224D216F30032BBBF /* AddGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531271124D216F30032BBBF /* AddGoalViewController.swift */; };
+		5531275524D311350032BBBF /* CompleteGoalViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531275424D311350032BBBF /* CompleteGoalViewController.swift */; };
 		55386C5F24D1C2BB001A15E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55386C5E24D1C2BB001A15E0 /* AppDelegate.swift */; };
 		55386C6124D1C2BB001A15E0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55386C6024D1C2BB001A15E0 /* SceneDelegate.swift */; };
 		55386C6324D1C2BB001A15E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55386C6224D1C2BB001A15E0 /* ViewController.swift */; };
@@ -47,6 +48,7 @@
 		5531270D24D20ABA0032BBBF /* GoalsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewController.swift; sourceTree = "<group>"; };
 		5531270F24D20B230032BBBF /* Goals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
 		5531271124D216F30032BBBF /* AddGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddGoalViewController.swift; sourceTree = "<group>"; };
+		5531275424D311350032BBBF /* CompleteGoalViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompleteGoalViewController.swift; sourceTree = "<group>"; };
 		55386C5B24D1C2BB001A15E0 /* FinalProjectKWK.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FinalProjectKWK.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		55386C5E24D1C2BB001A15E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		55386C6024D1C2BB001A15E0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -130,6 +132,7 @@
 				5531270F24D20B230032BBBF /* Goals.swift */,
 				5531271124D216F30032BBBF /* AddGoalViewController.swift */,
 				39CA0F7C24D22982000135B6 /* Homepage.swift */,
+				5531275424D311350032BBBF /* CompleteGoalViewController.swift */,
 			);
 			path = FinalProjectKWK;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				F0EF39F524D2F2170095F6BE /* SessionsTableViewController.swift in Sources */,
 				5531271024D20B230032BBBF /* Goals.swift in Sources */,
 				F052EB0724D22769007CC270 /* TimerViewController.swift in Sources */,
+				5531275524D311350032BBBF /* CompleteGoalViewController.swift in Sources */,
 				55386C5F24D1C2BB001A15E0 /* AppDelegate.swift in Sources */,
 				55386C6924D1C2BB001A15E0 /* FinalProjectKWK.xcdatamodeld in Sources */,
 				55386C6124D1C2BB001A15E0 /* SceneDelegate.swift in Sources */,
