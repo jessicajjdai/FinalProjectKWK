@@ -8,19 +8,30 @@
 
 import UIKit
 
-class TimerViewController: UIViewController {
-
+class TimerViewController: UIViewController{
+    // picker
+    @IBOutlet weak var pickerGoal: UIPickerView!
+    var pickerData: [String] = [String]()
+    // end of picker code for now
+    
+    // stopwatch code
     var startTime = TimeInterval()
     var timer = Timer()
-
+    
     @IBOutlet weak var stopWatch: UILabel!
+    // end of stopwatch code (for now)
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        
+        pickerData = ["Goal 1", "Goal 2", "Goal 3"]
     }
+    
+    
 
+    // continue timer/stopwatch code
     @IBAction func start(_ sender: Any) {
         if (!timer.isValid) {
             let aSelector = #selector(updateTime)

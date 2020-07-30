@@ -312,6 +312,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Timer" id="Gzb-el-Out"/>
                     <connections>
+                        <outlet property="pickerGoal" destination="GmB-iQ-oLy" id="IKz-lU-aE3"/>
                         <outlet property="stopWatch" destination="CxV-Ge-u41" id="0XA-LQ-9JS"/>
                     </connections>
                 </viewController>

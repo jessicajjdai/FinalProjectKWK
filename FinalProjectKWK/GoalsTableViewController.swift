@@ -31,7 +31,10 @@ class GoalsTableViewController: UITableViewController {
         
         return[water, diet]
     }
+    
+    
 
+    
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -43,6 +46,7 @@ class GoalsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         //
+        
         return goals.count
     }
 
@@ -107,7 +111,10 @@ class GoalsTableViewController: UITableViewController {
         if let addVC = segue.destination as? AddGoalViewController {
             addVC.previousVC = self;
         }
+        if let getNumVC = segue.destination as? HomeViewController {
+            getNumVC.tableGoalVC = self;
+        }
     }
-
+    
 
 }
