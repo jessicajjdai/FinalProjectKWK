@@ -15,6 +15,7 @@ class TimerViewController: UIViewController{
     // end of picker code for now
     
     // stopwatch code
+    var nextVC = SessionsTableViewController()
     var startTime = TimeInterval()
     var timer = Timer()
     
@@ -71,6 +72,18 @@ class TimerViewController: UIViewController{
         stopWatch.text = timeElapsed
     }
     
+    @IBAction func saveSession(_ sender: Any) {
+        let todaySession = TimedSession()
+        if let stopWatchTime = stopWatch.text {
+            todaySession.timeSpent = stopWatchTime
+            todaySession.goal = "sessionGoal"
+            todaySession.date = "XX/XX/XXXX"
+        }
+        nextVC.savedSessions.append(todaySession)
+        nextVC.tableView.reloadData()
+        navigationController?.popViewController(animated: true)
+
+    }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

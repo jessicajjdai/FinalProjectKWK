@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lnb-mf-V0w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1497.1014492753625" y="596.65178571428567"/>
+            <point key="canvasLocation" x="-586.95652173913049" y="596.65178571428567"/>
         </scene>
         <!--Goals-->
         <scene sceneID="Zc6-Vu-81m">
@@ -298,6 +298,9 @@
                                 <state key="normal" title="Finish and Submit Session!">
                                     <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
                                 </state>
+                                <connections>
+                                    <action selector="saveSession:" destination="qO0-Sw-O0w" eventType="touchUpInside" id="GPr-1q-1vK"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JSR-mr-XEu">
                                 <rect key="frame" x="126" y="746" width="162" height="30"/>
@@ -318,7 +321,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8k-VT-uUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2352.1739130434785" y="596.65178571428567"/>
+            <point key="canvasLocation" x="-2323" y="1292"/>
         </scene>
         <!--Home-->
         <scene sceneID="3lV-0g-Y2r">
@@ -486,12 +489,12 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="qO0-Sw-O0w" kind="relationship" relationship="rootViewController" id="ACj-Kz-Zs4"/>
+                        <segue destination="kZi-Zk-fCY" kind="relationship" relationship="rootViewController" id="JR9-TE-U2p"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rE8-OE-IaM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2352" y="-289"/>
+            <point key="canvasLocation" x="-2323" y="-289"/>
         </scene>
         <!--Rewards-->
         <scene sceneID="ghB-rk-o1v">
@@ -513,6 +516,41 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2KM-B7-mqW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1497" y="-289"/>
+        </scene>
+        <!--Sessions-->
+        <scene sceneID="A5T-16-rDX">
+            <objects>
+                <tableViewController id="kZi-Zk-fCY" customClass="SessionsTableViewController" customModule="FinalProjectKWK" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="klZ-GI-5wG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="reuseTableIdentifier" id="far-6I-yU0">
+                                <rect key="frame" x="0.0" y="28" width="414" height="43.666667938232422"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="far-6I-yU0" id="0j7-Gd-m5H">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.666667938232422"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="kZi-Zk-fCY" id="ZsZ-t1-3aS"/>
+                            <outlet property="delegate" destination="kZi-Zk-fCY" id="BvJ-Ik-pka"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Sessions" id="ngw-h4-asn">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="3NO-18-rJ0">
+                            <connections>
+                                <segue destination="qO0-Sw-O0w" kind="show" id="6XZ-72-TXu"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yj0-6Z-z74" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2323.1884057971015" y="596.65178571428567"/>
         </scene>
     </scenes>
     <resources>
