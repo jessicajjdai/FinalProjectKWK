@@ -9,6 +9,7 @@
 import UIKit
 
 class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
+
     // picker
     @IBOutlet weak var pickerGoal: UIPickerView!
     var pickerData: [String] = [String]()
@@ -95,16 +96,18 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     }
     
     @IBAction func saveSession(_ sender: Any) {
-        let todaySession = TimedSession()
-        if let stopWatchTime = stopWatch.text {
-            todaySession.timeSpent = stopWatchTime
-            todaySession.goal = "sessionGoal"
-            todaySession.date = "XX/XX/XXXX"
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+            let todaySession = TimedSessionCD(entity: TimedSessionCD.entity(), insertInto: context)
+            if let stopWatchTime = stopWatch.text {
+                todaySession.timeSpent = stopWatchTime
+                todaySession.goal = "Goal goes here"
+                todaySession.date = "XX/XX/XXXX"
+            }
+            try? context.save()
+            navigationController?.popViewController(animated: true)
         }
-        nextVC.savedSessions.append(todaySession)
-        nextVC.tableView.reloadData()
-        navigationController?.popViewController(animated: true)
     }
+    
     @IBAction func cancelSession(_ sender: Any) {
         timer.invalidate()
         navigationController?.popViewController(animated: true)

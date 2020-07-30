@@ -10,22 +10,31 @@ import UIKit
 
 class SessionsTableViewController: UITableViewController {
     
-    var savedSessions : [TimedSession] = []
+    var savedSessions : [TimedSessionCD] = []
     
-    func createSessions() -> [TimedSession] {
-        let monday = TimedSession()
+    /* func createSessions() -> [TimedSessionCD] {
+        let monday = TimedSessionCD()
         monday.goal = "Read more"
         monday.timeSpent = "15:00"
         monday.date = "5/13/2020"
         
-        let tuesday = TimedSession()
+        let tuesday = TimedSessionCD()
         tuesday.goal = "Read more"
         tuesday.timeSpent = "30:00"
         tuesday.date = "3/23/2020"
         
         return [monday, tuesday]
+    } */
+    
+    func getSessionLog() {
+      if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+        if let coreDataSavedSessions = try? context.fetch(TimedSessionCD.fetchRequest()) as? [TimedSessionCD] {
+                   savedSessions = coreDataSavedSessions
+                   tableView.reloadData()
+        }
+      }
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -34,10 +43,13 @@ class SessionsTableViewController: UITableViewController {
 
         // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
         // self.navigationItem.rightBarButtonItem = self.editButtonItem
-        savedSessions = createSessions()
+        // savedSessions = createSessions()
         self.tableView.reloadData()
     }
-
+    override func viewWillAppear(_ animated: Bool) {
+        getSessionLog()
+    }
+    
     // MARK: - Table view data source
 /*
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -49,13 +61,15 @@ class SessionsTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return savedSessions.count
     }
+    
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseTableIdentifier", for: indexPath)
         let listedSession = savedSessions[indexPath.row]
-        cell.textLabel?.text = listedSession.date + " Spent " + listedSession.timeSpent + " on " + listedSession.goal
-
+        if let listedGoal = listedSession.goal {
+            cell.textLabel?.text = "MM/dd/yyyy \(listedGoal) for " + listedSession.timeSpent!
+        }
         // Configure the cell...
 
         return cell
@@ -96,6 +110,7 @@ class SessionsTableViewController: UITableViewController {
         return true
     }
     */
+    
 
     // MARK: - Navigation
 

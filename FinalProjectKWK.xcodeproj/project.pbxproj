@@ -23,7 +23,6 @@
 		55386C8424D1C2C2001A15E0 /* FinalProjectKWKUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55386C8324D1C2C2001A15E0 /* FinalProjectKWKUITests.swift */; };
 		F052EB0724D22769007CC270 /* TimerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F052EB0624D22769007CC270 /* TimerViewController.swift */; };
 		F0EF39F524D2F2170095F6BE /* SessionsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EF39F424D2F2170095F6BE /* SessionsTableViewController.swift */; };
-		F0EF39F724D2F3A50095F6BE /* SessionTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F0EF39F624D2F3A50095F6BE /* SessionTimer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +65,6 @@
 		55386C8524D1C2C2001A15E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F052EB0624D22769007CC270 /* TimerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewController.swift; sourceTree = "<group>"; };
 		F0EF39F424D2F2170095F6BE /* SessionsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionsTableViewController.swift; sourceTree = "<group>"; };
-		F0EF39F624D2F3A50095F6BE /* SessionTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SessionTimer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,7 +119,6 @@
 				55386C6024D1C2BB001A15E0 /* SceneDelegate.swift */,
 				55386C6224D1C2BB001A15E0 /* ViewController.swift */,
 				55386C6424D1C2BB001A15E0 /* Main.storyboard */,
-				F0EF39F624D2F3A50095F6BE /* SessionTimer.swift */,
 				F052EB0624D22769007CC270 /* TimerViewController.swift */,
 				55386C6A24D1C2C2001A15E0 /* Assets.xcassets */,
 				55386C6C24D1C2C2001A15E0 /* LaunchScreen.storyboard */,
@@ -288,7 +285,6 @@
 			files = (
 				39CA0F7D24D22982000135B6 /* Homepage.swift in Sources */,
 				5531271224D216F30032BBBF /* AddGoalViewController.swift in Sources */,
-				F0EF39F724D2F3A50095F6BE /* SessionTimer.swift in Sources */,
 				5531270E24D20ABA0032BBBF /* GoalsTableViewController.swift in Sources */,
 				55386C6324D1C2BB001A15E0 /* ViewController.swift in Sources */,
 				F0EF39F524D2F2170095F6BE /* SessionsTableViewController.swift in Sources */,
