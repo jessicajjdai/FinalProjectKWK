@@ -10,7 +10,11 @@ import UIKit
 
 class AddGoalViewController: UIViewController {
     var previousVC = GoalsTableViewController()
-    
+    //pointSystem Code
+    var pointTotal = Int()
+    var addPoints = coin()
+    var diffLev = Int()
+
     
     @IBOutlet weak var goalTitleTextField: UITextField!
     @IBOutlet weak var importantSwitch: UISwitch!
@@ -21,6 +25,26 @@ class AddGoalViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    @IBAction func easyButton(_ sender: UIButton) {
+           diffLev = 1 //setting the difficulty level
+    
+       }
+       @IBAction func mediumButton(_ sender: UIButton){
+           diffLev = 2 //setting the difficulty level
+       }
+       @IBAction func hardButton(_ sender: UIButton){
+           diffLev = 3 //setting the difficulty level
+       }
+
+    
+    func setPoints() -> Int{ // setting up point system
+        let goal1 = coin() //goal1 is a new coin object, created everytime
+        goal1.goal = goalTitleTextField.text!
+        goal1.numOfCoins = Int.random(in: 1...5)
+        goal1.difficultyLevel = diffLev
+        goal1.points = goal1.difficultyLevel * goal1.numOfCoins
+            return(goal1.points)
+        }
     @IBAction func addTapped(_ sender: Any) {
         
         // we have to grab this view context to be able to work with Core Data
@@ -40,7 +64,21 @@ class AddGoalViewController: UIViewController {
             
             navigationController?.popViewController(animated: true)
             
-        
+        //PointSystem code
+             addPoints.points = setPoints()
+                print(addPoints.points) //for debugging
+                    //Creating core data object to store total number of points that user currently has
+                if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+                    let totPoints = PointSystem(entity: PointSystem.entity(), insertInto: context)
+            //            totPoints.totalPoints = Int64(nextVC.pointTotal)
+                    pointTotal += addPoints.points
+                    totPoints.totalPoints += Int64(pointTotal)
+                    try? context.save()
+                }
+            
+           
+
+
         
         
         // code for iteration 1
@@ -61,15 +99,19 @@ class AddGoalViewController: UIViewController {
         */
     }
     
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let rewardsVC = segue.destination as? PointsViewController {
+                rewardsVC.previousVC = self
+            }
+
     }
-    */
+    
 
 }
 

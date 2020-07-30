@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3940878224D37C59005FA58D /* coin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3940878124D37C59005FA58D /* coin.swift */; };
+		3940878424D38386005FA58D /* PointsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3940878324D38386005FA58D /* PointsViewController.swift */; };
+		3940878624D38629005FA58D /* ShopViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3940878524D38629005FA58D /* ShopViewController.swift */; };
+		3940878824D38808005FA58D /* GoalWorldViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3940878724D38808005FA58D /* GoalWorldViewController.swift */; };
 		39CA0F7D24D22982000135B6 /* Homepage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 39CA0F7C24D22982000135B6 /* Homepage.swift */; };
 		5531270E24D20ABA0032BBBF /* GoalsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531270D24D20ABA0032BBBF /* GoalsTableViewController.swift */; };
 		5531271024D20B230032BBBF /* Goals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5531270F24D20B230032BBBF /* Goals.swift */; };
@@ -43,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3940878124D37C59005FA58D /* coin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = coin.swift; sourceTree = "<group>"; };
+		3940878324D38386005FA58D /* PointsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsViewController.swift; sourceTree = "<group>"; };
+		3940878524D38629005FA58D /* ShopViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShopViewController.swift; sourceTree = "<group>"; };
+		3940878724D38808005FA58D /* GoalWorldViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalWorldViewController.swift; sourceTree = "<group>"; };
 		39CA0F7C24D22982000135B6 /* Homepage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Homepage.swift; sourceTree = "<group>"; };
 		5531270D24D20ABA0032BBBF /* GoalsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsTableViewController.swift; sourceTree = "<group>"; };
 		5531270F24D20B230032BBBF /* Goals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Goals.swift; sourceTree = "<group>"; };
@@ -130,6 +138,10 @@
 				5531271124D216F30032BBBF /* AddGoalViewController.swift */,
 				39CA0F7C24D22982000135B6 /* Homepage.swift */,
 				5531275424D311350032BBBF /* CompleteGoalViewController.swift */,
+				3940878124D37C59005FA58D /* coin.swift */,
+				3940878324D38386005FA58D /* PointsViewController.swift */,
+				3940878524D38629005FA58D /* ShopViewController.swift */,
+				3940878724D38808005FA58D /* GoalWorldViewController.swift */,
 			);
 			path = FinalProjectKWK;
 			sourceTree = "<group>";
@@ -288,11 +300,15 @@
 				5531270E24D20ABA0032BBBF /* GoalsTableViewController.swift in Sources */,
 				55386C6324D1C2BB001A15E0 /* ViewController.swift in Sources */,
 				F0EF39F524D2F2170095F6BE /* SessionsTableViewController.swift in Sources */,
+				3940878824D38808005FA58D /* GoalWorldViewController.swift in Sources */,
 				5531271024D20B230032BBBF /* Goals.swift in Sources */,
+				3940878224D37C59005FA58D /* coin.swift in Sources */,
 				F052EB0724D22769007CC270 /* TimerViewController.swift in Sources */,
 				5531275524D311350032BBBF /* CompleteGoalViewController.swift in Sources */,
+				3940878424D38386005FA58D /* PointsViewController.swift in Sources */,
 				55386C5F24D1C2BB001A15E0 /* AppDelegate.swift in Sources */,
 				55386C6924D1C2BB001A15E0 /* FinalProjectKWK.xcdatamodeld in Sources */,
+				3940878624D38629005FA58D /* ShopViewController.swift in Sources */,
 				55386C6124D1C2BB001A15E0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
