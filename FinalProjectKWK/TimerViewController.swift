@@ -8,7 +8,7 @@
 
 import UIKit
 
-class TimerViewController: UIViewController{
+class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
     // picker
     @IBOutlet weak var pickerGoal: UIPickerView!
     var pickerData: [String] = [String]()
@@ -26,7 +26,8 @@ class TimerViewController: UIViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        
+        self.pickerGoal.delegate = self
+        self.pickerGoal.dataSource = self
         pickerData = ["Goal 1", "Goal 2", "Goal 3"]
     }
     
@@ -72,6 +73,27 @@ class TimerViewController: UIViewController{
         stopWatch.text = timeElapsed
     }
     
+    // Picker View Code
+    // Number of columns of data
+    func numberOfComponents(in pickerView: UIPickerView) -> Int {
+        return 1
+    }
+    // The number of rows of data
+    func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
+        return pickerData.count
+    }
+    
+    // The data to return fopr the row and component (column) that's being passed in
+    func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
+        return pickerData[row]
+    }
+    
+    // Capture the picker view selection
+    func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
+        // This method is triggered whenever the user makes a change to the picker selection.
+        // The parameter named row and component represents what was selected.
+    }
+    
     @IBAction func saveSession(_ sender: Any) {
         let todaySession = TimedSession()
         if let stopWatchTime = stopWatch.text {
@@ -82,8 +104,12 @@ class TimerViewController: UIViewController{
         nextVC.savedSessions.append(todaySession)
         nextVC.tableView.reloadData()
         navigationController?.popViewController(animated: true)
-
     }
+    @IBAction func cancelSession(_ sender: Any) {
+        timer.invalidate()
+        navigationController?.popViewController(animated: true)
+    }
+    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

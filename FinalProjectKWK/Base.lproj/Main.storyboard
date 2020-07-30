@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lnb-mf-V0w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-586.95652173913049" y="596.65178571428567"/>
+            <point key="canvasLocation" x="-1497" y="597"/>
         </scene>
         <!--Goals-->
         <scene sceneID="Zc6-Vu-81m">
@@ -308,6 +308,9 @@
                                 <state key="normal" title="Cancel / Delete Session">
                                     <color key="titleColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancelSession:" destination="qO0-Sw-O0w" eventType="touchUpInside" id="uKY-7O-yJc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
