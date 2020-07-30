@@ -21,7 +21,30 @@ class AddGoalViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func addTapped(_ sender: UIButton) {
+    @IBAction func addTapped(_ sender: Any) {
+        
+        // we have to grab this view context to be able to work with Core Data
+        if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+
+          // we are creating a new ToDoCD object here, naming it toDo
+          let goal = GoalCD(entity: GoalCD.entity(), insertInto: context)
+
+          // if the titleTextField has text, we will call that text titleText
+          if let titleText = goalTitleTextField.text {
+              // we will take the titleText and assign that value to toDo.name
+              // this .name and .important came from the attributes you typed in on the Core Data page!
+              goal.name = titleText
+              goal.important = importantSwitch.isOn
+          }
+            try? context.save()
+            
+            navigationController?.popViewController(animated: true)
+            
+        
+        
+        
+        // code for iteration 1
+        /*
         let goal = Goals()
         // must check that something was typed in
         if let goalTitle = goalTitleTextField.text {
@@ -35,6 +58,7 @@ class AddGoalViewController: UIViewController {
         previousVC.tableView.reloadData()
         //ask if imbedding in navigation controller
         navigationController?.popViewController(animated: true)
+        */
     }
     
     /*
@@ -46,5 +70,7 @@ class AddGoalViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
     */
+
+}
 
 }
