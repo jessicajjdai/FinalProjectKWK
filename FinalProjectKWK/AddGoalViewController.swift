@@ -63,7 +63,7 @@ class AddGoalViewController: UIViewController {
    
     
     @IBAction func addTapped(_ sender: Any) {
-        
+        /*
         // we have to grab this view context to be able to work with Core Data
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
 
@@ -82,7 +82,7 @@ class AddGoalViewController: UIViewController {
             
             navigationController?.popViewController(animated: true)
             
-        
+        */
             
            
 
@@ -90,7 +90,7 @@ class AddGoalViewController: UIViewController {
         
         
         // code for iteration 1
-        /*
+        
         let goal = Goals()
         // must check that something was typed in
         if let goalTitle = goalTitleTextField.text {
@@ -104,14 +104,18 @@ class AddGoalViewController: UIViewController {
         previousVC.tableView.reloadData()
         //ask if imbedding in navigation controller
         navigationController?.popViewController(animated: true)
-        */
+        
     }
     
     
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
-    func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+    
+    
+    //there was an error saying it needed override, but idk if it actually does, i added it on for now, dont know what that changes
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         
@@ -125,4 +129,3 @@ class AddGoalViewController: UIViewController {
 
     }
 
-}

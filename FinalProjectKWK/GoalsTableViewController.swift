@@ -121,14 +121,14 @@ class GoalsTableViewController: UITableViewController {
         if let addVC = segue.destination as? AddGoalViewController {
             addVC.previousVC = self;
         }
-        
+        /*
         if let completeVC = segue.destination as? CompleteGoalViewController {
             if let goals = sender as? Goals {
                 completeVC.selectedGoal = goals
                 completeVC.previousVC = self
             }
         }
-        
+        */
         if let getNumVC = segue.destination as? HomeViewController {
             getNumVC.tableGoalVC = self;
         }
