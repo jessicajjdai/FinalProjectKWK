@@ -110,7 +110,7 @@
                     </view>
                     <navigationItem key="navigationItem" title="Rewards" id="Wb6-AG-MpZ"/>
                     <connections>
-                        <outlet property="totalCactiLabel" destination="5Ln-OE-EGo" id="9JE-Or-3ql"/>
+                        <outlet property="totalCactusLabel" destination="5Ln-OE-EGo" id="cye-Ry-PVT"/>
                         <outlet property="totalDucksLabel" destination="QSR-Hl-Hlk" id="L4f-4p-LDb"/>
                         <outlet property="totalPointsLabel" destination="0AO-cA-0cm" id="Gtj-FA-TxI"/>
                     </connections>
@@ -764,7 +764,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="App Name" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mB-Gk-gfD">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="PassionFruit" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7mB-Gk-gfD">
                                 <rect key="frame" x="40" y="117" width="334" height="138"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.92906035088961003" green="0.90001209416324934" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

@@ -9,15 +9,15 @@
 import UIKit
 
 class ShopViewController: UIViewController {
-    /*
+    
     var nextVC = CompleteGoalViewController()
-    var previousVC = GoalWorldViewController()
+    var goalVC = GoalWorldViewController()
     
     @IBOutlet weak var pointTotalLabel: UILabel!
     var duckNum = Int()
     var cactusNum = Int()
-    var totDuckNum = Int()
-    var totCactusNum = Int()
+//    var totDuckNum = Int()
+//    var totCactusNum = Int()
     
     @IBOutlet weak var totalPointsLeft: UILabel!
     
@@ -26,26 +26,26 @@ class ShopViewController: UIViewController {
         pointTotalLabel.text = String(nextVC.pointTotal)
         // Do any additional setup after loading the view.
         checkBase()
-        totDuckNum = previousVC.duckArrayLength
-        totCactusNum = previousVC.cactusArrayLength
+//        totDuckNum = goalVC.duckArrayLength
+//        totCactusNum = goalVC.cactusArrayLength
     }
    
     @IBAction func duckBoughtButton(_ sender: UIButton) {
         duckNum += 1
-        totDuckNum -= 1
+//        totDuckNum -= 1
         nextVC.pointTotal -= 50
         pointTotalLabel.text = String(nextVC.pointTotal)
         checkBase()
-        checkDuckStock()
+//        checkDuckStock()
     }
     
     @IBAction func cactusBoughtButton(_ sender: UIButton) {
         cactusNum += 1
-        totCactusNum -= 1
+//        totCactusNum -= 1
         nextVC.pointTotal -= 30
         pointTotalLabel.text = String(nextVC.pointTotal)
         checkBase()
-        checkCactusStock()
+//        checkCactusStock()
 
     }
     func checkBase(){
@@ -58,24 +58,24 @@ class ShopViewController: UIViewController {
             self.present(alert, animated: true)
         }
     }
-    func checkDuckStock(){
-        if totDuckNum <= 0{
-            let alert = UIAlertController(title: "Sorry, no more ducks", message: "Doobie has left town, Doobie will come back eventually", preferredStyle: .alert)
-            alert.addAction(.init(title: "Ok", style: .default, handler: nil))
-            alert.addAction(.init(title: "Cancel", style: .cancel, handler: nil))
-            
-            self.present(alert, animated: true)
-        }
-        
-    }
-        func checkCactusStock(){
-            if totCactusNum <= 0{
-                let alert = UIAlertController(title: "Sorry, no more Cactus", message: "Cammie has left town, Cammie will come back eventually", preferredStyle: .alert)
-                alert.addAction(.init(title: "Ok", style: .default, handler: nil))
-                alert.addAction(.init(title: "Cancel", style: .cancel, handler: nil))
-                self.present(alert, animated: true)
-            }
-        }
+//    func checkDuckStock(){
+//        if totDuckNum <= 0{
+//            let alert = UIAlertController(title: "Sorry, no more ducks", message: "Doobie has left town, Doobie will come back eventually", preferredStyle: .alert)
+//            alert.addAction(.init(title: "Ok", style: .default, handler: nil))
+//            alert.addAction(.init(title: "Cancel", style: .cancel, handler: nil))
+//
+//            self.present(alert, animated: true)
+//        }
+//
+//    }
+//        func checkCactusStock(){
+//            if totCactusNum <= 0{
+//                let alert = UIAlertController(title: "Sorry, no more Cactus", message: "Cammie has left town, Cammie will come back eventually", preferredStyle: .alert)
+//                alert.addAction(.init(title: "Ok", style: .default, handler: nil))
+//                alert.addAction(.init(title: "Cancel", style: .cancel, handler: nil))
+//                self.present(alert, animated: true)
+//            }
+//        }
     
     
     // MARK: - Navigation
@@ -84,9 +84,9 @@ class ShopViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if let rewardsVC = segue.destination as? PointsViewController {
-            rewardsVC.shopVC = self
+        if let pointsVC = segue.destination as? PointsViewController {
+            pointsVC.shopVC = self
         }
      }
-        */
+        
 }

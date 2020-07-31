@@ -9,12 +9,11 @@
 import UIKit
 
 class PointsViewController: UIViewController {
-    /*
-    var previousPointVC = CompleteGoalViewController() // pointTotal
+    
+    var completeVC = CompleteGoalViewController() // pointTotal
     var shopVC = ShopViewController() // Number of ducks, num of cacti
     
     
-//    var goalWorldVC = 
     
     @IBOutlet weak var totalPointsLabel: UILabel!
     @IBOutlet weak var totalDucksLabel: UILabel!
@@ -22,10 +21,10 @@ class PointsViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        totalPointsLabel.text = String(previousPointVC.pointTotal)
+        totalPointsLabel.text = String(completeVC.pointTotal)
 //        // Do any additional setup after loading the view.
-        totalDucksLabel.text = String(shopVC.duckNum)
-        totalCactusLabel.text = String(shopVC.cactusNum)
+//        totalDucksLabel.text = String(shopVC.duckNum)
+//        totalCactusLabel.text = String(shopVC.cactusNum)
     }
     
     
@@ -39,6 +38,6 @@ class PointsViewController: UIViewController {
         // Pass the selected object to the new view controller.
     }
  */
- */
+ 
 }
 

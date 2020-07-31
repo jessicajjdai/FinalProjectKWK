@@ -10,11 +10,11 @@ import UIKit
 
 class CompleteGoalViewController: UIViewController {
     var previousVC = GoalsTableViewController()
-    var nextVC = AddGoalViewController()
+    var addVC = AddGoalViewController()
     var selectedGoal : GoalsCD?
-//    //PointSystemCode
-//    var pointTotal = 500
-//    var addPoints = coin()
+    //PointSystemCode
+    var pointTotal = 500
+    var addPoints = coin()
     
     @IBOutlet weak var goalTitle: UILabel!
     @IBOutlet weak var difficultyLevelOutlet: UILabel!
@@ -27,19 +27,22 @@ class CompleteGoalViewController: UIViewController {
         difficultyLevelOutlet.text = difficultyLevelLabel()
     }
     
-//    func setPoints() -> Int{ // setting up point system
-//           let goal1 = coin() //goal1 is a new coin object, created everytime
-//           goal1.goal = goalTitle.text!
-//           goal1.numOfCoins = Int.random(in: 1...5)
-//           goal1.difficultyLevel = nextVC.diffLev
-//           goal1.points = goal1.difficultyLevel * goal1.numOfCoins
-//           return(goal1.points)
-//    }
+    func setPoints() -> Int{ // setting up point system
+        let goal1 = coin() //goal1 is a new coin object, created everytime
+        goal1.goal = goalTitle.text!
+        goal1.numOfCoins = Int.random(in: 1...5)
+        goal1.difficultyLevel = addVC.diffLev
+        goal1.points = goal1.difficultyLevel * goal1.numOfCoins
+        print(goal1.points)
+        return(goal1.points)
+        
+    }
     
 
     @IBAction func completeTapped(_ sender: UIButton) {
-        // addPoints.points = setPoints()
-        // pointTotal += addPoints.points
+         addPoints.points = setPoints()
+         pointTotal += addPoints.points
+         print(pointTotal)
         if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
           if let theGoal = selectedGoal {
             context.delete(theGoal)
@@ -68,12 +71,12 @@ class CompleteGoalViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-//        if let pointsVC = segue.destination as? PointsViewController {
-//            pointsVC.previousPointVC = self
-//        }
-//        if let shopVC = segue.destination as? ShopViewController {
-//            shopVC.nextVC = self
-//        }
+        if let pointsVC = segue.destination as? PointsViewController {
+            pointsVC.completeVC = self
+        }
+        if let shopVC = segue.destination as? ShopViewController {
+            shopVC.nextVC = self
+        }
     }
     
 }
