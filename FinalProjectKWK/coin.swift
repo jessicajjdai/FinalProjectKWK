@@ -8,7 +8,7 @@
 
 import UIKit
  
-class coin{
+class coin {
     var goal = String()
     var numOfCoins = Int()
     var difficultyLevel = Int()

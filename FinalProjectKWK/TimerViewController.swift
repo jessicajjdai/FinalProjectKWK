@@ -13,6 +13,7 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     // picker
     @IBOutlet weak var pickerGoal: UIPickerView!
     var pickerData: [String] = [String]()
+    @IBOutlet weak var secretGoalLabel: UILabel!
     // end of picker code for now
     
     // stopwatch code
@@ -83,16 +84,15 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return pickerData.count
     }
-    
-    // The data to return fopr the row and component (column) that's being passed in
+    //
     func pickerView(_ pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String? {
         return pickerData[row]
     }
-    
-    // Capture the picker view selection
+    //
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         // This method is triggered whenever the user makes a change to the picker selection.
         // The parameter named row and component represents what was selected.
+        secretGoalLabel.text = pickerData[row]
     }
     
     @IBAction func saveSession(_ sender: Any) {

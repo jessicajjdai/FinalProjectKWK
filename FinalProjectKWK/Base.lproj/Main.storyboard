@@ -243,7 +243,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2b-3Y-v3f">
-                                <rect key="frame" x="294" y="680" width="100" height="106"/>
+                                <rect key="frame" x="294" y="680" width="99" height="106"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Chicken" image="—Pngtree—mbe style icon plant prickly_4047843"/>
                                 <connections>
@@ -261,7 +261,7 @@
                                 </connections>
                             </button>
                             <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wA-R2-pgR">
-                                <rect key="frame" x="157" y="341" width="100" height="106"/>
+                                <rect key="frame" x="157" y="341" width="99" height="106"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Chicken" image="—Pngtree—mbe style icon plant prickly_4047843"/>
                                 <connections>
@@ -361,7 +361,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="in1-cp-T2z">
-                                <rect key="frame" x="69" y="318" width="100" height="106"/>
+                                <rect key="frame" x="69" y="318" width="99" height="106"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Chicken" image="PngItem_908706"/>
                                 <connections>
@@ -722,19 +722,30 @@
                                     <action selector="cancelSession:" destination="qO0-Sw-O0w" eventType="touchUpInside" id="uKY-7O-yJc"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="---" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qCf-My-enF">
+                                <rect key="frame" x="381" y="787.66666666666663" width="23" height="20.333333333333371"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="vo2-yt-GQE" firstAttribute="bottom" secondItem="qCf-My-enF" secondAttribute="bottom" constant="5" id="nzp-gl-Mw3"/>
+                            <constraint firstItem="vo2-yt-GQE" firstAttribute="trailing" secondItem="qCf-My-enF" secondAttribute="trailing" constant="10" id="wDC-8h-TRf"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="vo2-yt-GQE"/>
                     </view>
                     <navigationItem key="navigationItem" title="Timer" id="Gzb-el-Out"/>
                     <connections>
                         <outlet property="pickerGoal" destination="GmB-iQ-oLy" id="IKz-lU-aE3"/>
+                        <outlet property="secretGoalLabel" destination="qCf-My-enF" id="QzD-oW-K0w"/>
                         <outlet property="stopWatch" destination="CxV-Ge-u41" id="0XA-LQ-9JS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b8k-VT-uUl" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2323" y="1292"/>
+            <point key="canvasLocation" x="-2323.1884057971015" y="1291.7410714285713"/>
         </scene>
         <!--Home-->
         <scene sceneID="3lV-0g-Y2r">
