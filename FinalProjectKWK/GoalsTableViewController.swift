@@ -9,18 +9,24 @@
 import UIKit
 
 class GoalsTableViewController: UITableViewController {
-    var goals : [Goals] = []
     
+    var goals : [GoalsCD] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        goals = createGoals()
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
+    }
+    override func viewWillAppear(_ animated: Bool) {
+      getGoals()
+    }
 
-        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-        // self.navigationItem.rightBarButtonItem = self.editButtonItem
+    
+    func getGoals() {
+      if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
+        if let coreDataGoals = try? context.fetch(GoalsCD.fetchRequest()) as? [GoalsCD] {
+                goals = coreDataGoals
+                tableView.reloadData()
+        }
+      }
     }
     
     func createGoals() -> [Goals] {
@@ -31,6 +37,7 @@ class GoalsTableViewController: UITableViewController {
         
         let diet = Goals()
         diet.name = "Eat Healthy"
+        diet.important = false
         diet.difficultyLevel = 2
         
         return[water, diet]
@@ -41,38 +48,40 @@ class GoalsTableViewController: UITableViewController {
     
     // MARK: - Table view data source
 
-    override func numberOfSections(in tableView: UITableView) -> Int {
+    /* override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         // nothing will show up in table if return is 0
         return 1
-    }
+    } */
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         //
-        
         return goals.count
     }
 
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "reuseIdentifier", for: indexPath)
-
         // Configure the cell...
-        let goal = goals[indexPath.row]
+        let aGoal = goals[indexPath.row]
         
-        if goal.important {
-            cell.textLabel?.text = "🔥" + goal.name
-        } else {
-            cell.textLabel?.text = "⬇️" + goal.name
+        if let aGoalName = aGoal.name {
+            if aGoal.important {
+                cell.textLabel?.text = "🔥" + aGoalName
+            } else {
+                cell.textLabel?.text = "⬇️" + aGoalName
+            }
         }
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let goal = goals[indexPath.row]
-        
-        performSegue(withIdentifier: "moveToGoalInfo", sender: goal)
+
+      // this gives us a single ToDo
+      let aGoal = goals[indexPath.row]
+
+      performSegue(withIdentifier: "moveToGoalInfo", sender: aGoal)
     }
 
 
@@ -116,23 +125,17 @@ class GoalsTableViewController: UITableViewController {
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
         if let addVC = segue.destination as? AddGoalViewController {
-            addVC.previousVC = self;
+          addVC.previousVC = self
         }
-        /*
+        
         if let completeVC = segue.destination as? CompleteGoalViewController {
-            if let goals = sender as? Goals {
-                completeVC.selectedGoal = goals
-                completeVC.previousVC = self
-            }
+          if let aGoal = sender as? GoalsCD {
+            completeVC.selectedGoal = aGoal
+            completeVC.previousVC = self
+          }
         }
-        */
-        if let getNumVC = segue.destination as? HomeViewController {
-            getNumVC.tableGoalVC = self;
-        }
+        
     }
     
-
 }

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
-<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19F101" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="GoalCD" representedClassName="GoalCD" syncable="YES" codeGenerationType="class">
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="16119" systemVersion="19G73" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="GoalsCD" representedClassName="GoalsCD" syncable="YES" codeGenerationType="class">
         <attribute name="difficultyLevel" optional="YES" attributeType="Integer 16" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="important" attributeType="Boolean" defaultValueString="NO" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
@@ -14,7 +14,7 @@
         <attribute name="timeSpent" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="GoalCD" positionX="-63" positionY="-18" width="128" height="88"/>
+        <element name="GoalsCD" positionX="-63" positionY="-18" width="128" height="88"/>
         <element name="PointSystem" positionX="-54" positionY="27" width="128" height="58"/>
         <element name="TimedSessionCD" positionX="-63" positionY="0" width="128" height="88"/>
     </elements>

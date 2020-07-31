@@ -9,7 +9,8 @@
 import UIKit
 
 class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
-
+    
+    
     // picker
     @IBOutlet weak var pickerGoal: UIPickerView!
     var pickerData: [String] = [String]()
@@ -23,14 +24,15 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
     
     @IBOutlet weak var stopWatch: UILabel!
     // end of stopwatch code (for now)
-    
-    
+                
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
         self.pickerGoal.delegate = self
         self.pickerGoal.dataSource = self
         pickerData = ["Goal 1", "Goal 2", "Goal 3"]
+        
     }
     
     

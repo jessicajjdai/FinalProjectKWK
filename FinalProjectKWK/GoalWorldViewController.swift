@@ -5,10 +5,10 @@
 //  Created by Mimi Zhang on 7/30/20.
 //  Copyright © 2020 Jessica Dai. All rights reserved.
 //
-
 import UIKit
 
 class GoalWorldViewController: UIViewController {
+    /*
     var previousVC = ShopViewController()
     var duckArray = [Bool]()
     var cactusArray = [Bool]()
@@ -69,5 +69,5 @@ class GoalWorldViewController: UIViewController {
         }
     }
     
-
+*/
 }

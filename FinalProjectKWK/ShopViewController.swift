@@ -9,6 +9,7 @@
 import UIKit
 
 class ShopViewController: UIViewController {
+    /*
     var nextVC = CompleteGoalViewController()
     var previousVC = GoalWorldViewController()
     
@@ -86,8 +87,6 @@ class ShopViewController: UIViewController {
         if let rewardsVC = segue.destination as? PointsViewController {
             rewardsVC.shopVC = self
         }
-
-    }
-    
-
+     }
+        */
 }
