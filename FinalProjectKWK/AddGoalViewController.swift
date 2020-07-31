@@ -10,41 +10,58 @@ import UIKit
 
 class AddGoalViewController: UIViewController {
     var previousVC = GoalsTableViewController()
-    //pointSystem Code
-    var pointTotal = Int()
-    var addPoints = coin()
-    var diffLev = Int()
+    var diffLev = Int()//Point System
 
     
     @IBOutlet weak var goalTitleTextField: UITextField!
     @IBOutlet weak var importantSwitch: UISwitch!
     
+    @IBOutlet weak var easyButtonOutlet: UIButton!
+    @IBOutlet weak var mediumButtonOutlet: UIButton!
+    @IBOutlet weak var hardButtonOutlet: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        //button colors
+        easyButtonOutlet.backgroundColor = .white
+        mediumButtonOutlet.backgroundColor = .white
+        hardButtonOutlet.backgroundColor = .white
         // Do any additional setup after loading the view.
     }
     
     @IBAction func easyButton(_ sender: UIButton) {
-           diffLev = 1 //setting the difficulty level
-    
+        if easyButtonOutlet.backgroundColor == .white{
+            easyButtonOutlet.backgroundColor = .green
+            diffLev = 1 //setting the difficulty level
+        }else if easyButtonOutlet.backgroundColor == .green{
+            easyButtonOutlet.backgroundColor = .white
+            diffLev = 0 //resetting the difficulty level
+        }
        }
+    
        @IBAction func mediumButton(_ sender: UIButton){
-           diffLev = 2 //setting the difficulty level
+        if mediumButtonOutlet.backgroundColor == .white{
+            mediumButtonOutlet.backgroundColor = .green
+            diffLev = 2 //setting the difficulty level
+        }else if mediumButtonOutlet.backgroundColor == .green{
+            mediumButtonOutlet.backgroundColor = .white
+            diffLev = 0 // resetting the difficulty level
+        }
        }
        @IBAction func hardButton(_ sender: UIButton){
-           diffLev = 3 //setting the difficulty level
+        if hardButtonOutlet.backgroundColor == .white{
+            hardButtonOutlet.backgroundColor = .green
+            diffLev = 3 //setting the difficulty level
+        }else if hardButtonOutlet.backgroundColor == .green{
+            hardButtonOutlet.backgroundColor = .white
+            diffLev = 0 // resetting the difficulty level
+        }
        }
 
     
-    func setPoints() -> Int{ // setting up point system
-        let goal1 = coin() //goal1 is a new coin object, created everytime
-        goal1.goal = goalTitleTextField.text!
-        goal1.numOfCoins = Int.random(in: 1...5)
-        goal1.difficultyLevel = diffLev
-        goal1.points = goal1.difficultyLevel * goal1.numOfCoins
-            return(goal1.points)
-        }
+   
+    
     @IBAction func addTapped(_ sender: Any) {
         
         // we have to grab this view context to be able to work with Core Data
@@ -59,22 +76,13 @@ class AddGoalViewController: UIViewController {
               // this .name and .important came from the attributes you typed in on the Core Data page!
               goal.name = titleText
               goal.important = importantSwitch.isOn
+              goal.difficultyLevel = Int16(diffLev)
           }
             try? context.save()
             
             navigationController?.popViewController(animated: true)
             
-        //PointSystem code
-             addPoints.points = setPoints()
-                print(addPoints.points) //for debugging
-                    //Creating core data object to store total number of points that user currently has
-                if let context = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext {
-                    let totPoints = PointSystem(entity: PointSystem.entity(), insertInto: context)
-            //            totPoints.totalPoints = Int64(nextVC.pointTotal)
-                    pointTotal += addPoints.points
-                    totPoints.totalPoints += Int64(pointTotal)
-                    try? context.save()
-                }
+        
             
            
 
@@ -106,13 +114,15 @@ class AddGoalViewController: UIViewController {
     func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
-        if let rewardsVC = segue.destination as? PointsViewController {
-                rewardsVC.previousVC = self
+        
+            if let completeVC = segue.destination as? CompleteGoalViewController {
+                completeVC.nextVC = self
             }
+        
 
-    }
+        }
     
 
-}
+    }
 
 }

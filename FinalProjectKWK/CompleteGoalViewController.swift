@@ -11,8 +11,13 @@ import UIKit
 class CompleteGoalViewController: UIViewController {
     var previousVC = GoalsTableViewController()
     var selectedGoal = Goals()
+    var nextVC = AddGoalViewController()
+    //PointSystemCode
+    var pointTotal = 500
+    var addPoints = coin()
     
     @IBOutlet weak var goalTitle: UILabel!
+    @IBOutlet weak var difficultyLevelOutlet: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,19 +25,48 @@ class CompleteGoalViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         goalTitle.text = selectedGoal.name
+        difficultyLevelOutlet.text = difficultyLevelLabel()
+    }
+    
+    func setPoints() -> Int{ // setting up point system
+           let goal1 = coin() //goal1 is a new coin object, created everytime
+           goal1.goal = goalTitle.text!
+           goal1.numOfCoins = Int.random(in: 1...5)
+           goal1.difficultyLevel = nextVC.diffLev
+           goal1.points = goal1.difficultyLevel * goal1.numOfCoins
+           return(goal1.points)
     }
     
     @IBAction func completeTapped(_ sender: UIButton) {
+        addPoints.points = setPoints()
+        pointTotal += addPoints.points
     }
     
-    /*
+    func difficultyLevelLabel() -> String{
+        if nextVC.diffLev == 1 {
+            return "🌶"
+        } else if nextVC.diffLev == 2 {
+            return "🌶🌶"
+        } else if nextVC.diffLev == 3{
+            return "🌶🌶🌶"
+        }
+        return "null"
+    }
+    
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
+        if let pointsVC = segue.destination as? PointsViewController {
+            pointsVC.previousVC = self
+        }
+        if let shopVC = segue.destination as? ShopViewController {
+            shopVC.nextVC = self
+        }
     }
-    */
+    
 
 }

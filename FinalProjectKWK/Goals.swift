@@ -11,4 +11,5 @@ import UIKit
 class Goals {
     var name = ""
     var important = false
+    var difficultyLevel = Int()
 }

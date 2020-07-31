@@ -143,11 +143,163 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQr-Wg-PuK">
+                                <rect key="frame" x="32" y="566" width="100" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chicken" image="PngItem_908706"/>
+                                <connections>
+                                    <action selector="duckBoughtButton:" destination="UJG-01-Ana" eventType="touchUpInside" id="CCd-z9-7Kk"/>
+                                    <action selector="duckBoughtButton:" destination="cfc-23-CnF" eventType="touchUpInside" id="OzT-Af-U7c"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gxw-Bt-A9I">
+                                <rect key="frame" x="286" y="566" width="100" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chicken" image="PngItem_908706"/>
+                                <connections>
+                                    <action selector="duckBoughtButton:" destination="UJG-01-Ana" eventType="touchUpInside" id="rpV-1c-5a1"/>
+                                    <action selector="duckBoughtButton:" destination="cfc-23-CnF" eventType="touchUpInside" id="zDA-bx-bU8"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gr6-i1-5Co">
+                                <rect key="frame" x="159" y="679" width="100" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chicken" image="PngItem_908706"/>
+                                <connections>
+                                    <action selector="duckBoughtButton:" destination="UJG-01-Ana" eventType="touchUpInside" id="O59-08-vZQ"/>
+                                    <action selector="duckBoughtButton:" destination="cfc-23-CnF" eventType="touchUpInside" id="ozf-hN-PUa"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5QJ-YB-tBb">
+                                <rect key="frame" x="159" y="455" width="100" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chicken" image="PngItem_908706"/>
+                                <connections>
+                                    <action selector="duckBoughtButton:" destination="UJG-01-Ana" eventType="touchUpInside" id="4Fo-Vb-TVO"/>
+                                    <action selector="duckBoughtButton:" destination="cfc-23-CnF" eventType="touchUpInside" id="xO4-db-Q7Y"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aZV-Ku-Za4">
+                                <rect key="frame" x="286" y="341" width="100" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chicken" image="PngItem_908706"/>
+                                <connections>
+                                    <action selector="duckBoughtButton:" destination="cfc-23-CnF" eventType="touchUpInside" id="Vfj-07-jKt"/>
+                                    <action selector="duckBoughtButton:" destination="UJG-01-Ana" eventType="touchUpInside" id="pRi-n5-MoN"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rei-GV-xeS">
+                                <rect key="frame" x="159" y="222" width="100" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chicken" image="PngItem_908706"/>
+                                <connections>
+                                    <action selector="duckBoughtButton:" destination="UJG-01-Ana" eventType="touchUpInside" id="HH5-g1-gLe"/>
+                                    <action selector="duckBoughtButton:" destination="cfc-23-CnF" eventType="touchUpInside" id="RCq-vX-Oyr"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fpV-fz-9yQ">
+                                <rect key="frame" x="32" y="452" width="100" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chicken" image="—Pngtree—mbe style icon plant prickly_4047843"/>
+                                <connections>
+                                    <action selector="cactusBoughtButton:" destination="UJG-01-Ana" eventType="touchUpInside" id="XBB-d6-9ua"/>
+                                    <action selector="cactusBoughtButton:" destination="cfc-23-CnF" eventType="touchUpInside" id="sf1-Y7-tpD"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eAj-cW-D3N">
+                                <rect key="frame" x="32" y="680" width="100" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chicken" image="—Pngtree—mbe style icon plant prickly_4047843"/>
+                                <connections>
+                                    <action selector="cactusBoughtButton:" destination="UJG-01-Ana" eventType="touchUpInside" id="0pq-wj-9UV"/>
+                                    <action selector="cactusBoughtButton:" destination="cfc-23-CnF" eventType="touchUpInside" id="XNs-Pz-6VM"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OQr-yh-KT4">
+                                <rect key="frame" x="32" y="222" width="100" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chicken" image="—Pngtree—mbe style icon plant prickly_4047843"/>
+                                <connections>
+                                    <action selector="cactusBoughtButton:" destination="UJG-01-Ana" eventType="touchUpInside" id="G5k-fm-MMt"/>
+                                    <action selector="cactusBoughtButton:" destination="cfc-23-CnF" eventType="touchUpInside" id="HQ2-3H-QHd"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vHJ-Fv-f3g">
+                                <rect key="frame" x="286" y="221" width="100" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chicken" image="—Pngtree—mbe style icon plant prickly_4047843"/>
+                                <connections>
+                                    <action selector="cactusBoughtButton:" destination="cfc-23-CnF" eventType="touchUpInside" id="kDk-N8-mjQ"/>
+                                    <action selector="cactusBoughtButton:" destination="UJG-01-Ana" eventType="touchUpInside" id="mxT-dZ-ZRi"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aEA-gA-CNR">
+                                <rect key="frame" x="286" y="452" width="100" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chicken" image="—Pngtree—mbe style icon plant prickly_4047843"/>
+                                <connections>
+                                    <action selector="cactusBoughtButton:" destination="cfc-23-CnF" eventType="touchUpInside" id="8iv-xc-w2C"/>
+                                    <action selector="cactusBoughtButton:" destination="UJG-01-Ana" eventType="touchUpInside" id="vsB-JT-Ee4"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D2b-3Y-v3f">
+                                <rect key="frame" x="294" y="680" width="100" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chicken" image="—Pngtree—mbe style icon plant prickly_4047843"/>
+                                <connections>
+                                    <action selector="cactusBoughtButton:" destination="UJG-01-Ana" eventType="touchUpInside" id="vNz-l5-0JL"/>
+                                    <action selector="cactusBoughtButton:" destination="cfc-23-CnF" eventType="touchUpInside" id="wXj-v6-Ink"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZTe-1C-Oxz">
+                                <rect key="frame" x="159" y="566" width="100" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chicken" image="—Pngtree—mbe style icon plant prickly_4047843"/>
+                                <connections>
+                                    <action selector="cactusBoughtButton:" destination="cfc-23-CnF" eventType="touchUpInside" id="XUh-yi-8mf"/>
+                                    <action selector="cactusBoughtButton:" destination="UJG-01-Ana" eventType="touchUpInside" id="gib-Kd-hMI"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0wA-R2-pgR">
+                                <rect key="frame" x="157" y="341" width="100" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chicken" image="—Pngtree—mbe style icon plant prickly_4047843"/>
+                                <connections>
+                                    <action selector="cactusBoughtButton:" destination="UJG-01-Ana" eventType="touchUpInside" id="2Lr-rX-pax"/>
+                                    <action selector="cactusBoughtButton:" destination="cfc-23-CnF" eventType="touchUpInside" id="dFH-mh-9YZ"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vBL-HF-zOB">
+                                <rect key="frame" x="32" y="336" width="100" height="106"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxX="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Chicken" image="PngItem_908706"/>
+                                <connections>
+                                    <action selector="duckBoughtButton:" destination="UJG-01-Ana" eventType="touchUpInside" id="K1P-Yt-5Bm"/>
+                                    <action selector="duckBoughtButton:" destination="cfc-23-CnF" eventType="touchUpInside" id="ePH-Jw-wvB"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="d8Q-JC-JyI"/>
                     </view>
                     <navigationItem key="navigationItem" id="DsM-5I-Q3b"/>
+                    <connections>
+                        <outlet property="cactus1" destination="vHJ-Fv-f3g" id="EDl-jW-eSA"/>
+                        <outlet property="cactus2" destination="vHJ-Fv-f3g" id="nrU-yj-adl"/>
+                        <outlet property="cactus3" destination="0wA-R2-pgR" id="4G9-Cy-BDa"/>
+                        <outlet property="cactus4" destination="fpV-fz-9yQ" id="gqr-Pe-MWF"/>
+                        <outlet property="cactus5" destination="aEA-gA-CNR" id="39L-hh-8i2"/>
+                        <outlet property="cactus6" destination="ZTe-1C-Oxz" id="kys-zu-TYp"/>
+                        <outlet property="cactus7" destination="eAj-cW-D3N" id="540-mr-Qh7"/>
+                        <outlet property="cactus8" destination="D2b-3Y-v3f" id="Cjb-wS-mWo"/>
+                        <outlet property="duck1" destination="rei-GV-xeS" id="FyW-R6-apD"/>
+                        <outlet property="duck2" destination="vBL-HF-zOB" id="iSL-4b-2ZQ"/>
+                        <outlet property="duck3" destination="aZV-Ku-Za4" id="OYH-CQ-WNc"/>
+                        <outlet property="duck4" destination="5QJ-YB-tBb" id="WQb-av-tES"/>
+                        <outlet property="duck5" destination="yQr-Wg-PuK" id="28G-cK-UKt"/>
+                        <outlet property="duck6" destination="gxw-Bt-A9I" id="1cY-BV-mu9"/>
+                        <outlet property="duck7" destination="gr6-i1-5Co" id="f8f-OZ-LV2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jeh-o2-qNF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -217,8 +369,8 @@
                                     <action selector="duckBoughtButton:" destination="UJG-01-Ana" eventType="touchUpInside" id="wNb-7r-G0R"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Chibby the Chicken" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMv-9b-f43">
-                                <rect key="frame" x="69" y="420" width="100" height="53"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doobie the Duck" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PMv-9b-f43">
+                                <rect key="frame" x="55" y="420" width="128" height="53"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -240,8 +392,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysd-cN-tl1">
-                                <rect key="frame" x="80" y="593" width="265" height="153"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ysd-cN-tl1">
+                                <rect key="frame" x="80" y="627" width="223" height="116"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="265" id="R5R-fZ-Ewv"/>
                                 </constraints>
@@ -258,10 +410,16 @@
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="GJH-IF-78h" firstAttribute="trailing" secondItem="ysd-cN-tl1" secondAttribute="trailing" constant="80" id="KOI-j5-qnv"/>
+                            <constraint firstItem="ysd-cN-tl1" firstAttribute="leading" secondItem="GJH-IF-78h" secondAttribute="leading" constant="80" id="U0l-nh-1D5"/>
+                            <constraint firstItem="GJH-IF-78h" firstAttribute="bottom" secondItem="ysd-cN-tl1" secondAttribute="bottom" constant="70" id="e7s-6Y-hf4"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="GJH-IF-78h"/>
                     </view>
                     <navigationItem key="navigationItem" id="NGM-q1-T3x"/>
                     <connections>
+                        <outlet property="pointTotalLabel" destination="ysd-cN-tl1" id="6PH-Lp-LtU"/>
                         <outlet property="totalPointsLeft" destination="ysd-cN-tl1" id="9ds-7v-ScO"/>
                     </connections>
                 </viewController>
@@ -396,8 +554,11 @@
                     </view>
                     <navigationItem key="navigationItem" id="bGM-N7-tMf"/>
                     <connections>
+                        <outlet property="easyButtonOutlet" destination="Uaq-rg-Zn8" id="rpi-FA-qk9"/>
                         <outlet property="goalTitleTextField" destination="nl5-X3-5L5" id="iZ0-7u-OGg"/>
+                        <outlet property="hardButtonOutlet" destination="JKS-Wy-xl0" id="Dkc-2d-C04"/>
                         <outlet property="importantSwitch" destination="aMw-G2-4lp" id="HNQ-aB-5tE"/>
+                        <outlet property="mediumButtonOutlet" destination="FdR-p8-DH8" id="qbr-UW-s0I"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Gnp-4k-D1M" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -439,8 +600,8 @@
                                     <action selector="completeTapped:" destination="dTY-ht-R6A" eventType="touchUpInside" id="3Pu-W2-UPp"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="important?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kS-G9-l09">
-                                <rect key="frame" x="165" y="249" width="83" height="20"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Important?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5kS-G9-l09">
+                                <rect key="frame" x="165" y="249" width="84" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -466,6 +627,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="PHF-m0-HFN"/>
                     <connections>
+                        <outlet property="difficultyLevelOutlet" destination="mxB-Tn-XTs" id="D32-w8-Z7w"/>
                         <outlet property="goalTitle" destination="C73-pU-4xy" id="0ii-M6-ear"/>
                     </connections>
                 </viewController>

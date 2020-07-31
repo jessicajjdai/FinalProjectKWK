@@ -27,9 +27,11 @@ class GoalsTableViewController: UITableViewController {
         let water = Goals()
         water.name = "Drink Water"
         water.important = true
+        water.difficultyLevel = 3
         
         let diet = Goals()
         diet.name = "Eat Healthy"
+        diet.difficultyLevel = 2
         
         return[water, diet]
     }

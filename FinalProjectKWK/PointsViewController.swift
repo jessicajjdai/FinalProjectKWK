@@ -9,21 +9,24 @@
 import UIKit
 
 class PointsViewController: UIViewController {
-    var previousVC = AddGoalViewController()
-    var shopVC = ShopViewController()
+    var previousVC = CompleteGoalViewController() // pointTotal
+    var shopVC = ShopViewController() // Number of ducks, num of cacti
+    
+    
 //    var goalWorldVC = 
     
     @IBOutlet weak var totalPointsLabel: UILabel!
     @IBOutlet weak var totalDucksLabel: UILabel!
-    @IBOutlet weak var totalCactiLabel: UILabel!
+    @IBOutlet weak var totalCactusLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         totalPointsLabel.text = String(previousVC.pointTotal)
 //        // Do any additional setup after loading the view.
         totalDucksLabel.text = String(shopVC.duckNum)
-        totalCactiLabel.text = String(shopVC.cactusNum)
+        totalCactusLabel.text = String(shopVC.cactusNum)
     }
+    
     
 
     /*
