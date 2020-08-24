@@ -103,7 +103,7 @@ class TimerViewController: UIViewController, UIPickerViewDelegate, UIPickerViewD
             if let stopWatchTime = stopWatch.text {
                 todaySession.timeSpent = stopWatchTime
                 todaySession.goal = "a goal"
-                todaySession.date = "07/31/2020"
+                todaySession.date = DateFormatter.localizedString(from: Date(), dateStyle: .short, timeStyle: .none)
             }
             try? context.save()
             navigationController?.popViewController(animated: true)
